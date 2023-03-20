@@ -192,10 +192,11 @@ export default function Home({ posts }) {
                 </div>
               </div>
               <div className="flex flex-col text-left w-full">
-                <label>Subject</label>
+                <label>Subject *</label>
                 <input
                   className="bg-black border-0 outline-none border-b-[1px] border-white hover:border-[1px] focus:border-[1px] px-1 py-4"
                   placeholder="Type the subject"
+                  required
                 />
               </div>
               <div className="flex flex-col text-left w-full">
