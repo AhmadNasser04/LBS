@@ -1,11 +1,11 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/api/hello": "pages/api/hello.js",
   "/about": "pages/about.html",
-  "/communities": "pages/communities.html",
   "/career-and-growth": "pages/career-and-growth.html",
+  "/communities": "pages/communities.html",
   "/education-and-events": "pages/education-and-events.html",
+  "/api/hello": "pages/api/hello.js",
   "/": "pages/index.html",
   "/publications-and-news": "pages/publications-and-news.html",
   "/post/[slug]": "pages/post/[slug].js",
