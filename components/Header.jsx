@@ -35,18 +35,30 @@ const NavBar = () => {
           }`}
         >
           <li className="md:ml-8 text-lg md:my-0 my-7">
-            <Link href="/" className={`navItem text-white`}>
+            <Link
+              href="/"
+              className={`navItem text-white`}
+              onClick={() => setOpen(!open)}
+            >
               Home
             </Link>
           </li>
           <li className="md:ml-8 text-lg md:my-0 my-7">
-            <Link href="/about" className={`navItem text-white`}>
+            <Link
+              href="/about"
+              className={`navItem text-white`}
+              onClick={() => setOpen(!open)}
+            >
               About
             </Link>
           </li>
           {categories.map((category) => (
             <li key={category.name} className="md:ml-8 text-lg md:my-0 my-7">
-              <Link href={category.slug} className={`navItem text-white`}>
+              <Link
+                href={category.slug}
+                className={`navItem text-white`}
+                onClick={() => setOpen(!open)}
+              >
                 {category.name}
               </Link>
             </li>
