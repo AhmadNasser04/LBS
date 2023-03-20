@@ -11,4 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
+function getInitialProps() {
+  return {};
+}
+
+MyApp.getInitialProps = getInitialProps;
+
 export default MyApp;
