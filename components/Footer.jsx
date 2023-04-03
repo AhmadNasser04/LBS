@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="bg-black h-[250px] flex flex-col items-center justify-center text-white space-y-10">
       <div className="font-bold text-2xl">Lebanese Bioinformaticians</div>
-      <div>abdullahsrour14@gmail.com</div>
+      <div>lamaayoub242@gmail.com</div>
       <div>
         @2023. Proudly made by{" "}
         <a

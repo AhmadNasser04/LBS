@@ -6,7 +6,7 @@ const graphqlAPI =
 export const getPosts = async () => {
   const query = gql`
     query GetPosts {
-      postsConnection(where: {}) {
+      postsConnection(where: {}, orderBy: createdAt_DESC) {
         edges {
           node {
             author {

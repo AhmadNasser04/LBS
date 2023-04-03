@@ -151,7 +151,7 @@ export default function Home({ posts }) {
       <div className="grid md:grid-cols-2 bg-black text-white text-center px-10 py-52 space-y-10 md:space-y-0">
         <div className="space-y-5">
           <div className="font-bold text-4xl">CONTACT US</div>
-          <div>abdullahsrour14@gmail.com</div>
+          <div>lamaayoub242@gmail.com</div>
           <div>+96181714414</div>
         </div>
         <div>
