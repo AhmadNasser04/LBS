@@ -1,4 +1,7 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+} from "firebase/auth";
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { auth } from "../../firebase.js";
@@ -11,9 +14,9 @@ function Signup() {
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
 
-  const signIn = (e) => {
+  const signUp = async (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
+    await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
         setRegisterMessage("Signup Successful");
@@ -24,13 +27,14 @@ function Signup() {
         setRegisterMessage("Signup Failed " + error.code);
         setRegisterState("error");
       });
+    await sendEmailVerification(auth.currentUser);
     setEmail("");
     setPassword("");
   };
 
   return (
     <div>
-      <form onSubmit={signIn} className="flex flex-col items-center space-y-5">
+      <form onSubmit={signUp} className="flex flex-col items-center space-y-5">
         <h1 className="p-5 text-2xl font-bold text-white">Signup</h1>
         <div className="flex flex-col space-y-1 w-full">
           <label htmlFor="email" className="text-gray-400 font-thin">
