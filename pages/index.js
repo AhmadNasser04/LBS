@@ -22,7 +22,7 @@ export default function Home({ posts }) {
           />
         </video>
         <h3 className="font-extralight text-xl">THE FIRST LEBANESE</h3>
-        <h1 className="font-semibold text-6xl">BIOINFORMATIONS</h1>
+        <h1 className="font-semibold text-6xl">BIOINFORMATICS</h1>
         <h3 className="font-extralight text-xl">NETWORK</h3>
       </div>
 
