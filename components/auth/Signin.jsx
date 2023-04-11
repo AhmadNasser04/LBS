@@ -2,6 +2,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Link from "next/link";
+import GoogleSignIn from "./GoogleSignIn";
 import { auth } from "../../firebase";
 
 function Signin() {
@@ -91,6 +92,12 @@ function Signin() {
       >
         {loginMessage}
       </div>
+      <div className="flex items-center my-5">
+        <div className="border-b border-gray-500 flex-grow mr-3"></div>
+        <div className="text-gray-500">or</div>
+        <div className="border-b border-gray-500 flex-grow ml-3"></div>
+      </div>
+      <GoogleSignIn />
       <div className="flex items-center my-5">
         <div className="border-b border-gray-500 flex-grow mr-3"></div>
         <div className="text-gray-500">Dont have an account?</div>

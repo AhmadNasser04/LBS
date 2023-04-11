@@ -5,6 +5,7 @@ import {
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { auth } from "../../firebase.js";
+import GoogleSignIn from "./GoogleSignIn.jsx";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -89,6 +90,12 @@ function Signup() {
       >
         {registerMessage}
       </div>
+      <div className="flex items-center my-5">
+        <div className="border-b border-gray-500 flex-grow mr-3"></div>
+        <div className="text-gray-500">or</div>
+        <div className="border-b border-gray-500 flex-grow ml-3"></div>
+      </div>
+      <GoogleSignIn />
       <div className="flex items-center my-5">
         <div className="border-b border-gray-500 flex-grow mr-3"></div>
         <div className="text-gray-500">Already have an account?</div>
