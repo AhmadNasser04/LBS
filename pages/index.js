@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home({ posts }) {
   return (
@@ -9,7 +10,17 @@ export default function Home({ posts }) {
       </Head>
 
       {/* HERO SECTION */}
-      <div className="flex flex-col text-[#EEEEEE] justify-center items-center text-center h-screen w-screen dnaBackground space-y-2">
+      <div className="flex flex-col text-[#EEEEEE] justify-center items-center text-center h-screen w-screen space-y-2">
+        <video
+          autoPlay
+          loop
+          className="w-full h-full absolute object-cover -z-10"
+        >
+          <source
+            src="https://media.graphassets.com/TcdvZSYASlWjuluvgmnH"
+            type="video/mp4"
+          />
+        </video>
         <h3 className="font-extralight text-xl">THE FIRST LEBANESE</h3>
         <h1 className="font-semibold text-6xl">BIOINFORMATIONS</h1>
         <h3 className="font-extralight text-xl">NETWORK</h3>
@@ -26,9 +37,11 @@ export default function Home({ posts }) {
             development of bioinformatics. Join LBS and optimize your progress
             through exchanging with a community of inspired scientists
           </p>
-          <button className="slideButton w-1/3">
-            <span>Join today</span>
-          </button>
+          <Link href="/login">
+            <button className="slideButton w-1/3">
+              <span>Join today</span>
+            </button>
+          </Link>
         </div>
         <div className="w-full h-full hidden lg:inline-block">
           <video autoPlay loop className="w-full h-full">
@@ -91,7 +104,13 @@ export default function Home({ posts }) {
               collaborators, and to the public both on a national and worldwide
               scale.
             </div>
-            <button className="w-1/5 slideButton">Read More</button>
+            {/* Make the link open a new tab */}
+            <Link
+              href="https://www.future-science.com/doi/10.2144/btn-2022-0039"
+              target="_blank"
+            >
+              <button className="w-1/5 slideButton">Read More</button>
+            </Link>
           </div>
           <div>
             <img
@@ -108,9 +127,11 @@ export default function Home({ posts }) {
         <div className="text-xl font-light">
           Join the Lebanese Bioinformaticians Society Today
         </div>
-        <button className="slideButton">
-          <span>Join today</span>
-        </button>
+        <Link href="/login">
+          <button className="slideButton">
+            <span>Join today</span>
+          </button>
+        </Link>
       </div>
 
       {/* CONTACT */}

@@ -3,6 +3,7 @@ import { auth } from "../../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import Signin from "../../components/auth/Signin";
 import Signup from "../../components/auth/Signup";
+import Link from "next/link";
 
 export default function Login() {
   const [user, setUser] = useState(null);
@@ -34,8 +35,13 @@ export default function Login() {
   return (
     <div className="pt-52 flex flex-col items-center justify-center space-y-5">
       {user ? (
-        <div>
-          <button onClick={userSignOut}>Sign out</button>
+        <div className="bg-[#111827] p-10 flex flex-col items-center justify-center rounded-lg shadow-lg space-y-5">
+          <Link href="/">
+            <button className="slideButton">Home</button>
+          </Link>
+          <button className="slideButton" onClick={userSignOut}>
+            Sign out
+          </button>
         </div>
       ) : (
         <div>
