@@ -27,7 +27,16 @@ const NavBar = () => {
           <span className="text-3xl text-[#00c46c] mr-1 pt-2">
             {/* LOGO GOES HERE */}
           </span>
-          <Link href="/">Lebanese Bioinformatics Society</Link>
+          <Link href="/" className="flex items-center justify-center space-x-2">
+            <img
+              src="https://media.graphassets.com/HvK0jXyRDGuhFMM07CQH"
+              alt="logo"
+              className="w-20 z-50"
+            />
+            <div className="hidden lg:inline-block">
+              Lebanese Bioinformatics Society
+            </div>
+          </Link>
         </div>
 
         <div

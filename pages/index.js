@@ -17,19 +17,21 @@ export default function Home({ posts }) {
           className="w-full h-full absolute object-cover -z-10"
         >
           <source
-            src="https://media.graphassets.com/TcdvZSYASlWjuluvgmnH"
+            src="https://media.graphassets.com/qcF47jinSVirOqRiU7vM"
             type="video/mp4"
           />
         </video>
-        <h3 className="font-extralight text-xl">THE FIRST LEBANESE</h3>
-        <h1 className="font-semibold text-6xl">BIOINFORMATICS</h1>
-        <h3 className="font-extralight text-xl">NETWORK</h3>
+        <div className="">
+          <h3 className="font-extralight md:text-xl">THE FIRST LEBANESE</h3>
+          <h1 className="font-semibold md:text-6xl text-4xl">BIOINFORMATICS</h1>
+          <h3 className="font-extralight md:text-xl">NETWORK</h3>
+        </div>
       </div>
 
       {/* ABOUT US */}
       <div className="w-screen h-screen flex flex-col lg:flex-row">
         <div className="flex flex-col  justify-center xl:pl-48 p-16 lg:w-1/2 space-y-8">
-          <h1 className="font-bold text-5xl">
+          <h1 className="font-bold text-3xl lg:text-5xl">
             The future starts with Bioinformaticians
           </h1>
           <p className="text-lg font-light">
@@ -38,15 +40,15 @@ export default function Home({ posts }) {
             through exchanging with a community of inspired scientists
           </p>
           <Link href="/login">
-            <button className="slideButton w-1/3">
+            <button className="slideButton md:w-1/3">
               <span>Join today</span>
             </button>
           </Link>
         </div>
-        <div className="w-full h-full hidden lg:inline-block">
+        <div className="w-full h-full">
           <video autoPlay loop className="w-full h-full">
             <source
-              src="https://media.graphassets.com/CiB8OMNOQTyIKwCIyS1b"
+              src="https://media.graphassets.com/1tyG8Lg3QXCGRvOHijA9"
               type="video/mp4"
             />
           </video>
@@ -54,7 +56,7 @@ export default function Home({ posts }) {
       </div>
 
       {/* ABOUT BIF */}
-      <div className="bg-black h-auto pt-16">
+      <div className="bg-black h-auto pt-24">
         <div className="text-white text-center text-xl md:text-5xl pb-24">
           Bioinformatics: Where it started & where we are now
         </div>
@@ -109,7 +111,7 @@ export default function Home({ posts }) {
               href="https://www.future-science.com/doi/10.2144/btn-2022-0039"
               target="_blank"
             >
-              <button className="w-1/5 slideButton">Read More</button>
+              <button className="md:w-1/5 slideButton">Read More</button>
             </Link>
           </div>
           <div>
