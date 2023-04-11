@@ -30,7 +30,14 @@ export default function Home({ posts }) {
             <span>Join today</span>
           </button>
         </div>
-        <div className="bg-blue-700 w-full h-full">a</div>
+        <div className="w-full h-full hidden lg:inline-block">
+          <video autoPlay loop className="w-full h-full">
+            <source
+              src="https://media.graphassets.com/CiB8OMNOQTyIKwCIyS1b"
+              type="video/mp4"
+            />
+          </video>
+        </div>
       </div>
 
       {/* ABOUT BIF */}
@@ -84,6 +91,7 @@ export default function Home({ posts }) {
               collaborators, and to the public both on a national and worldwide
               scale.
             </div>
+            <button className="w-1/5 slideButton">Read More</button>
           </div>
           <div>
             <img
