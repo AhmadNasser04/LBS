@@ -35,11 +35,16 @@ export default function Login() {
   return (
     <div className="pt-52 flex flex-col items-center justify-center space-y-5">
       {user ? (
-        <div className="bg-[#111827] p-10 flex flex-col items-center justify-center rounded-lg shadow-lg space-y-5">
+        <div className="bg-[#59114d] p-10 flex flex-col items-center justify-center rounded-lg shadow-lg space-y-5">
           <Link href="/">
-            <button className="slideButton">Home</button>
+            <button className="bg-white px-8 py-2 rounded-lg shadow-xl font-semibold text-[#59114d] border-2 border-white hover:bg-[#59114d] hover:text-white transition-all">
+              Home
+            </button>
           </Link>
-          <button className="slideButton" onClick={userSignOut}>
+          <button
+            className="bg-white px-8 py-2 rounded-lg shadow-xl font-semibold text-[#59114d] border-2 border-white hover:bg-[#59114d] hover:text-white transition-all"
+            onClick={userSignOut}
+          >
             Sign out
           </button>
         </div>
