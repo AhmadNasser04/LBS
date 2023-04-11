@@ -31,7 +31,7 @@ const NavBar = () => {
             <img
               src="https://media.graphassets.com/HvK0jXyRDGuhFMM07CQH"
               alt="logo"
-              className="w-20 z-50"
+              className="w-16 lg:w-20 z-50"
             />
             <div className="hidden lg:inline-block">
               Lebanese Bioinformatics Society

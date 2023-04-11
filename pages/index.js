@@ -12,8 +12,9 @@ export default function Home({ posts }) {
       {/* HERO SECTION */}
       <div className="flex flex-col text-[#EEEEEE] justify-center items-center text-center h-screen w-screen space-y-2">
         <video
-          autoPlay
+          autoPlay="autoplay"
           loop
+          muted
           className="w-full h-full absolute object-cover -z-10"
         >
           <source
@@ -46,7 +47,7 @@ export default function Home({ posts }) {
           </Link>
         </div>
         <div className="w-full h-full">
-          <video autoPlay loop className="w-full h-full">
+          <video autoPlay="autoplay" loop muted className="w-full h-full">
             <source
               src="https://media.graphassets.com/1tyG8Lg3QXCGRvOHijA9"
               type="video/mp4"
