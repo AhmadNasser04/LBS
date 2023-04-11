@@ -17,21 +17,20 @@ const NavBar = () => {
   return (
     <div className=" flex items-center justify-center z-10 fixed w-full">
       <div
-        className={`flex items-center justify-evenly bg-black shadow-lg w-full ${
+        className={`flex items-center justify-evenly ${
+          scrollPosition > 500 ? "bg-black" : "bg-[#091023]"
+        } shadow-lg w-full ${
           scrollPosition <= 50
-            ? "py-8"
-            : `py-4 opacity-80 ${open && "py-4 opacity-100"}`
+            ? "py-6 opacity-100"
+            : `py-2 opacity-80 ${open && "py-4 opacity-100"}`
         } lg:px-10 px-7 transition-all`}
       >
         <div className="font-bold text-2xl cursor-default flex items-center text-white roboto">
-          <span className="text-3xl text-[#00c46c] mr-1 pt-2">
-            {/* LOGO GOES HERE */}
-          </span>
           <Link href="/" className="flex items-center justify-center space-x-2">
             <img
               src="https://media.graphassets.com/HvK0jXyRDGuhFMM07CQH"
               alt="logo"
-              className="w-16 lg:w-20 z-50"
+              className="w-16 z-50"
             />
             <div className="hidden lg:inline-block">
               Lebanese Bioinformatics Society

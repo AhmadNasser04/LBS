@@ -10,7 +10,10 @@ export default function Home({ posts }) {
       </Head>
 
       {/* HERO SECTION */}
-      <div className="flex flex-col text-[#EEEEEE] justify-center items-center text-center h-screen w-screen space-y-2">
+      <div
+        className="flex flex-col text-[#EEEEEE] justify-center items-center text-center h-screen w-screen space-y-2"
+        id="hero"
+      >
         <video
           autoPlay="autoplay"
           loop
@@ -138,7 +141,10 @@ export default function Home({ posts }) {
       </div>
 
       {/* CONTACT */}
-      <div className="bg-black text-white text-center px-10 py-16 space-y-10">
+      <div
+        className="bg-black text-white text-center px-10 py-16 space-y-10"
+        id="contact"
+      >
         <div className="space-y-5 py-16">
           <div className="font-bold text-4xl">CONTACT US</div>
         </div>

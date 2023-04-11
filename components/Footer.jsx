@@ -40,11 +40,13 @@ function Footer() {
     <div className="flex flex-col lg:flex-row items-center justify-evenly px-10 py-6 space-y-10">
       {/* LOGO */}
       <div className="space-y-2">
-        <img
-          src="https://media.graphassets.com/M0VjmRpToyJpdB35UJYj"
-          alt="logo"
-          className="w-72"
-        />
+        <Link href="#hero" scroll={false}>
+          <img
+            src="https://media.graphassets.com/M0VjmRpToyJpdB35UJYj"
+            alt="logo"
+            className="w-72"
+          />
+        </Link>
       </div>
       {/* OTHER */}
       <div className="space-y-5">
@@ -55,7 +57,9 @@ function Footer() {
           <div className="font-light flex space-x-2">
             <div>lamaayoub242@gmail.com</div>
             <div className="border-r-2" />
-            <div>Contact Us</div>
+            <Link href="#contact" scroll={false}>
+              <div>Contact Us</div>
+            </Link>
           </div>
         </div>
         <div className="flex space-x-5">
@@ -71,9 +75,14 @@ function Footer() {
             </Link>
           ))}
         </div>
-        <button className="slideButton">
-          <span>Join today</span>
-        </button>
+        <div>
+          <Link href="/login">
+            <button className="slideButton">
+              <span>Join today</span>
+            </button>
+          </Link>
+        </div>
+
         <div className="border-b-2"></div>
         <div className="font-light">@ 2023 Lebanese Bioinformatics Society</div>
         <div className="font-light">Terms & Conditions</div>
@@ -96,9 +105,13 @@ function Footer() {
       <div className="space-y-2 rounded-3xl">
         <div>Got any suggestions?</div>
         <div>We would love to listen</div>
-        <button className="slideButton">
-          <span>Contact Us</span>
-        </button>
+        <div>
+          <Link href="#contact" scroll={false}>
+            <button className="slideButton">
+              <span>Contact Us</span>
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
