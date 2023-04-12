@@ -29,14 +29,14 @@ function ForgotPass() {
         className="flex flex-col items-center space-y-5"
       >
         <div className="flex flex-col space-y-1 w-full">
-          <label htmlFor="email" className="text-gray-400 font-thin">
+          <label htmlFor="email" className="text-white font-thin">
             Email
           </label>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="p-2 rounded bg-transparent border border-gray-500 focus:border-[#59114D] focus:outline-none text-white"
+            className="p-2 rounded bg-transparent border border-white focus:outline-none text-white"
           />
         </div>
         <p
@@ -46,7 +46,7 @@ function ForgotPass() {
         >
           {message}
         </p>
-        <button className="bg-[#59114D] w-full p-2 rounded-lg font-bold text-[#111827] cursor-pointer">
+        <button className="text-[#59114D] border-2 border-white w-full p-2 rounded-lg font-bold bg-white cursor-pointer hover:text-white hover:bg-[#59114D] transition-all">
           Reset Password
         </button>
       </form>

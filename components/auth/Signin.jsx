@@ -37,26 +37,26 @@ function Signin() {
       <form onSubmit={signIn} className="flex flex-col items-center space-y-5">
         <h1 className="p-5 text-2xl font-bold text-white">Login</h1>
         <div className="flex flex-col space-y-1 w-full">
-          <label htmlFor="email" className="text-gray-400 font-thin">
+          <label htmlFor="email" className="text-white font-thin">
             Email
           </label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="p-2 rounded bg-transparent border border-gray-500 focus:border-[#59114D] focus:outline-none text-white"
+            className="p-2 rounded bg-transparent border border-white focus:outline-none text-white"
             required
           />
         </div>
         <div className="flex flex-col space-y-1 w-full">
-          <label htmlFor="password" className="text-gray-400 font-thin">
+          <label htmlFor="password" className="text-white font-thin">
             Password
           </label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="p-2 rounded bg-transparent border border-gray-500 focus:border-[#59114D] focus:outline-none text-white"
+            className="p-2 rounded bg-transparent border border-white focus:outline-none text-white"
             required
           />
           <Link href="/reset">
@@ -74,34 +74,36 @@ function Signin() {
           <input
             type="submit"
             value="Login"
-            className="bg-[#59114D] w-full p-2 rounded-lg font-bold text-[#111827] cursor-pointer disabled:opacity-80"
+            className="bg-white w-full p-2 rounded-lg font-bold text-[#59114D] border-2 border-white disabled:opacity-60"
             disabled
           />
         ) : (
           <input
             type="submit"
             value="Login"
-            className="bg-[#59114D] w-full p-2 rounded-lg font-bold text-[#111827] cursor-pointer"
+            className="bg-white w-full p-2 rounded-lg font-bold text-[#59114D] cursor-pointer border-2 border-white hover:bg-[#59114D] hover:text-white transition-all"
           />
         )}
       </form>
       <div
         className={`text-center font-ligh p-5 ${
-          loginState === "error" && "text-red-500"
-        } ${loginState === "success" && "text-green-500"}`}
+          loginState === "idle" && "hidden"
+        } ${loginState === "error" && "text-red-500"} ${
+          loginState === "success" && "text-green-500"
+        }`}
       >
         {loginMessage}
       </div>
       <div className="flex items-center my-5">
-        <div className="border-b border-gray-500 flex-grow mr-3"></div>
-        <div className="text-gray-500">or</div>
-        <div className="border-b border-gray-500 flex-grow ml-3"></div>
+        <div className="border-b border-white flex-grow mr-3"></div>
+        <div className="text-white">or</div>
+        <div className="border-b border-white flex-grow ml-3"></div>
       </div>
       <GoogleSignIn />
       <div className="flex items-center my-5">
-        <div className="border-b border-gray-500 flex-grow mr-3"></div>
-        <div className="text-gray-500">Dont have an account?</div>
-        <div className="border-b border-gray-500 flex-grow ml-3"></div>
+        <div className="border-b border-white flex-grow mr-3"></div>
+        <div className="text-white">Dont have an account?</div>
+        <div className="border-b border-white flex-grow ml-3"></div>
       </div>
     </div>
   );
