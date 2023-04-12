@@ -15,7 +15,7 @@ function GoogleSignIn() {
   };
 
   return (
-    <div className="bg-white w-full p-2 rounded-lg font-bold text-[#59114D] cursor-pointer text-center border-2 border-white hover:bg-[#59114D] hover:text-white transition-all">
+    <div className="bg-white w-full p-2 rounded-lg font-bold text-[#59114D] cursor-pointer text-center border-2 border-white hover:bg-[#59114D] hover:text-white transition-all shadow-lg">
       <button
         onClick={() => signInWithGoogle().then((user) => console.log(user))}
       >

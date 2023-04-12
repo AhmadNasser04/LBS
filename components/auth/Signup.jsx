@@ -79,7 +79,7 @@ function Signup() {
           <input
             type="submit"
             value="Signup"
-            className="bg-white w-full p-2 rounded-lg font-bold text-[#59114D] cursor-pointer border-2 border-white hover:bg-[#59114D] hover:text-white transition-all"
+            className="bg-white w-full p-2 rounded-lg font-bold text-[#59114D] cursor-pointer border-2 border-white hover:bg-[#59114D] hover:text-white shadow-lg transition-all"
           />
         )}
       </form>
