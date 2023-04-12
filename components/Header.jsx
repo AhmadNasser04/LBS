@@ -61,7 +61,7 @@ const NavBar = () => {
           </li>
           <li className="lg:ml-8 text-lg lg:my-0 my-7">
             <Link
-              href="/about"
+              href="/mission"
               className={`navItem text-white`}
               onClick={() => setOpen(!open)}
             >
