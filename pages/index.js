@@ -18,7 +18,7 @@ export default function Home({ posts }) {
           autoPlay="autoplay"
           loop
           muted
-          className="w-full h-full absolute object-cover -z-10"
+          className="w-screen h-screen absolute object-cover -z-10"
         >
           <source
             src="https://media.graphassets.com/qcF47jinSVirOqRiU7vM"
