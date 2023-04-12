@@ -18,7 +18,7 @@ export default function Home({ posts }) {
           autoPlay="autoplay"
           loop
           muted
-          className="w-screen h-screen absolute object-cover -z-10"
+          className="w-screen h-screen absolute object-cover -z-10 top-0 left-0"
         >
           <source
             src="https://media.graphassets.com/qcF47jinSVirOqRiU7vM"
@@ -115,7 +115,9 @@ export default function Home({ posts }) {
               href="https://www.future-science.com/doi/10.2144/btn-2022-0039"
               target="_blank"
             >
-              <button className="md:w-1/5 slideButton">Read More</button>
+              <button className="border-2 border-white rounded-lg px-8 py-2 hover:bg-white/40 transition-all">
+                Read More
+              </button>
             </Link>
           </div>
           <div>
