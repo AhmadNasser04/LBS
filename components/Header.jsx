@@ -28,7 +28,7 @@ const NavBar = () => {
         <div className="font-bold text-2xl cursor-default flex items-center text-white roboto">
           <Link href="/" className="flex items-center justify-center space-x-2">
             <img
-              src="https://media.graphassets.com/HvK0jXyRDGuhFMM07CQH"
+              src="https://media.graphassets.com/pnjFHQVfRNOHk60UM07l"
               alt="logo"
               className="w-16 z-50"
             />

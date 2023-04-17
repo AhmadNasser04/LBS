@@ -10,6 +10,7 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 
 .dnaBackground {
@@ -21,7 +22,32 @@ body {
 .aboutUsBackground {
   background-image: url("https://media.graphassets.com/4WED3pNwR02jlE5eSEjE");
   width: 100%;
-  height: auto;
+  height: 100vh;
+}
+
+.paintOneBackground {
+  background-image: url("https://media.graphassets.com/bvPhMkjgRdqosQ44yGC0");
+  width: 100%;
+}
+
+.paintTwoBackground {
+  background-image: url("https://media.graphassets.com/rv13Z2gQQ4UVsL32mHwK");
+  width: 100%;
+}
+
+.paintThreeBackground {
+  background-image: url("https://media.graphassets.com/7Q12s8yrRCC98ZPg1gVs");
+  width: 100%;
+}
+
+.paintFourBackground {
+  background-image: url("https://media.graphassets.com/TX6gsfUTl2fXuiKDEESQ");
+  width: 100%;
+}
+
+.paintFiveBackground {
+  background-image: url("https://media.graphassets.com/9OktPLIwSrFYNy0jErAq");
+  width: 100%;
 }
 
 .outlinedText {
@@ -168,6 +194,86 @@ body {
 .cta:hover .hover-underline-animation:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.btn {
+  cursor: pointer;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 5px 0.2px #00000035;
+  box-shadow: 1px 1px 5px 0.2px #00000035;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  transition-delay: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-between;
+}
+
+.btn:hover {
+  width: 200px;
+  transition-delay: 0.2s;
+}
+
+.btn:hover > .paragraph {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.btn:hover > .icon-wrapper .icon {
+  transform: scale(1.1);
+}
+
+.bnt:hover > .icon-wrapper .icon path {
+  stroke: black;
+}
+
+.paragraph {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 18px;
+  margin-right: 20px;
+  padding-left: 20px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  transform: scale(0.9);
+  transition: 0.2s linear;
+}
+
+.icon path {
+  stroke: #000;
+  stroke-width: 2px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 @keyframes dd1 {

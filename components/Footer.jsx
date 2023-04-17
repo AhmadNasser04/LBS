@@ -42,7 +42,7 @@ function Footer() {
       <div className="space-y-2">
         <Link href="#hero" scroll={false}>
           <img
-            src="https://media.graphassets.com/M0VjmRpToyJpdB35UJYj"
+            src="https://media.graphassets.com/y4HpFtDGRIqF6usRYrxl"
             alt="logo"
             className="w-72"
           />
