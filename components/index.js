@@ -8,3 +8,4 @@ export { default as Author } from "./Author";
 export { default as Loader } from "./Loader";
 export { default as Footer } from "./Footer";
 export { default as AboutPerson } from "./AboutPerson";
+export { default as WorkRequestForm } from "./WorkRequestForm";

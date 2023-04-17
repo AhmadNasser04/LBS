@@ -37,10 +37,10 @@ function Footer() {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-evenly px-10 py-6 space-y-10">
+    <div className="flex flex-col lg:flex-row items-center justify-evenly px-10 py-6 space-y-10 bg-white z-50">
       {/* LOGO */}
       <div className="space-y-2">
-        <Link href="#hero" scroll={false}>
+        <Link href="/#hero" scroll={false}>
           <img
             src="https://media.graphassets.com/y4HpFtDGRIqF6usRYrxl"
             alt="logo"
