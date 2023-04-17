@@ -71,7 +71,7 @@ const NavBar = () => {
           {categories.map((category) => (
             <li key={category.name} className="lg:ml-8 text-lg lg:my-0 my-7">
               <Link
-                href={category.slug}
+                href={`/${category.slug}`}
                 className={`navItem text-white`}
                 onClick={() => setOpen(!open)}
               >

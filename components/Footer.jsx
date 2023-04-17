@@ -91,7 +91,7 @@ function Footer() {
       <div className="space-y-5 font-semibold">
         {categories.map((category) => (
           <div key={category.id}>
-            <Link href={category.slug}>{category.name}</Link>
+            <Link href={`/${category.slug}`}>{category.name}</Link>
           </div>
         ))}
         <div>
