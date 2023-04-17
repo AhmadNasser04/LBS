@@ -24,14 +24,13 @@ function index() {
         <div className={`p-10 space-y-5`}>
           <div className={`bg-white space-y-5 rounded-lg shadow-xl p-10`}>
             <h1 className={`text-black font-bold text-xl`}>Latest Research</h1>
-
+            <div className={`border-b border-gray-300`}></div>
             {posts
               .filter(
                 (post) => post.node.category.slug === "publications-and-news"
               )
               .map((post) => (
                 <div className={`space-y-5`}>
-                  <div className={`border-b border-gray-300`}></div>
                   <PostCard post={post.node} />
                 </div>
               ))}
