@@ -1,15 +1,16 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebase";
-import { PostCard, Categories, PostWidget } from "../../components";
+import { PostWidget, EventCard, WorkRequestForm } from "../../components";
 import { getPosts } from "../../services";
 import React, { useState, useEffect } from "react";
+import { Event } from "@mui/icons-material";
 
 function index() {
   const [user, setUser] = useState(null);
-  const [posts, setPosts] = useState([]);
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    getPosts().then((newCategories) => setPosts(newCategories));
+    getPosts().then((newCategories) => setEvents(newCategories));
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
@@ -23,40 +24,47 @@ function index() {
   }, []);
 
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-8 col-span-1">
-          {user
-            ? posts
+    <div className="bg-black px-10 mb-8 pt-28">
+      <div className={`flex flex-col lg:flex-row justify-center md:p-16`}>
+        <div>
+          {user ? (
+            <div
+              className={`space-y-5 p-5 flex flex-col items-center justify-center`}
+            >
+              {events
                 .filter(
-                  (post) => post.node.category.slug === "education-and-events"
+                  (event) => event.node.category.slug === "education-and-events"
                 )
-                .map((post) => (
-                  <PostCard post={post.node} key={post.node.title} />
-                ))
-            : posts
-                .filter(
-                  (post) => post.node.category.slug === "education-and-events"
-                )
-                .slice(0, 2)
-                .map((post) => (
-                  <PostCard post={post.node} key={post.node.title} />
+                .map((event) => (
+                  <div className={`lg:w-[70%]`}>
+                    <EventCard event={event.node} />
+                  </div>
                 ))}
-          {!user && (
-            <div className="flex flex-col space-y-3 shadow-lg rounded-lg p-10 items-center justify-center font-semibold text-3xl">
-              <div>Sign in to see more posts</div>
-              <button className="slideButton">
-                <span>Join today</span>
-              </button>
+            </div>
+          ) : (
+            <div>
+              <div>
+                {events
+                  .slice(0, 2)
+                  .filter(
+                    (event) =>
+                      event.node.category.slug === "education-and-events"
+                  )
+                  .map((event) => (
+                    <div>
+                      <EventCard event={event.node} />
+                    </div>
+                  ))}
+              </div>
+              <div>
+                <div></div>
+              </div>
             </div>
           )}
         </div>
-
-        <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
-            <PostWidget />
-            <Categories />
-          </div>
+        <div className={`p-5`}>
+          <PostWidget />
+          <WorkRequestForm />
         </div>
       </div>
     </div>

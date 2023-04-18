@@ -11,9 +11,7 @@ function index() {
 
   return (
     <div className={`pt-28 bg-black w-screen`}>
-      <div
-        className={`p-16 text-white w-screen flex items-center justify-center`}
-      >
+      <div className={`p-16 w-screen flex items-center justify-center`}>
         <h1 className={`text-3xl font-bold`}>
           We want your work to be our next display
         </h1>
