@@ -43,7 +43,9 @@ function index() {
             </div>
           ) : (
             <div>
-              <div>
+              <div
+                className={`space-y-5 p-5 flex flex-col items-center justify-center`}
+              >
                 {events
                   .slice(0, 2)
                   .filter(
@@ -51,7 +53,7 @@ function index() {
                       event.node.category.slug === "education-and-events"
                   )
                   .map((event) => (
-                    <div>
+                    <div className={`lg:w-[70%]`}>
                       <EventCard event={event.node} />
                     </div>
                   ))}
