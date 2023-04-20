@@ -1,31 +1,18 @@
-import { PostCard, Categories, PostWidget } from "../../components";
-import { getPosts } from "../../services";
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Link from "next/link";
 
 function index() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    getPosts().then((newCategories) => setPosts(newCategories));
-  }, []);
-
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-8 col-span-1">
-          {posts
-            .filter((post) => post.node.category.slug === "communities")
-            .map((post) => (
-              <PostCard post={post.node} key={post.node.title} />
-            ))}
-        </div>
-
-        <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
-            <PostWidget />
-            <Categories />
-          </div>
-        </div>
+    <div
+      className={`w-screen h-screen bg-black flex items-center justify-center`}
+    >
+      <div
+        className={`bg-white p-5 rounded-lg text-[#59114D] flex items-center justify-center flex-col space-y-5`}
+      >
+        <p>COMING SOON</p>
+        <Link href={`/`}>
+          <button className={`slideButton`}>GO Home</button>
+        </Link>
       </div>
     </div>
   );
