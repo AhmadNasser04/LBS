@@ -3,7 +3,7 @@ import { auth } from "../../firebase";
 import { PostWidget, EventCard, WorkRequestForm } from "../../components";
 import { getPosts } from "../../services";
 import React, { useState, useEffect } from "react";
-import { Event } from "@mui/icons-material";
+import Link from "next/link";
 
 function index() {
   const [user, setUser] = useState(null);
@@ -58,8 +58,15 @@ function index() {
                     </div>
                   ))}
               </div>
-              <div>
-                <div></div>
+              <div className={`flex flex-col items-center justify-center`}>
+                <div
+                  className={`lg:w-[70%] bg-white rounded-lg shadow-xl py-5 flex flex-col items-center justify-center`}
+                >
+                  <div>Want to see more events?</div>
+                  <Link href={`/login`}>
+                    <button className={`slideButton`}>Join us</button>
+                  </Link>
+                </div>
               </div>
             </div>
           )}
