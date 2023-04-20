@@ -54,14 +54,14 @@ export default function Login() {
             <div className="bg-[#59114d] p-16 rounded-xl shadow-xl flex flex-col items-center justify-center">
               <Signin />
               <button className="cta" onClick={() => setMode("signup")}>
-                <span class="hover-underline-animation"> SIGN UP </span>
+                <span className="hover-underline-animation"> SIGN UP </span>
               </button>
             </div>
           ) : (
             <div className="bg-[#59114d] p-16 rounded-xl shadow-xl flex flex-col items-center justify-center">
               <Signup />
               <button className="cta" onClick={() => setMode("signin")}>
-                <span class="hover-underline-animation"> SIGN IN </span>
+                <span className="hover-underline-animation"> SIGN IN </span>
               </button>
             </div>
           )}

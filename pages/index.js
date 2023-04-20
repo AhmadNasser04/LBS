@@ -6,7 +6,7 @@ export default function Home({ posts }) {
     <div>
       <Head>
         <title>Lebanese Bioinformatics Society</title>
-        <link rel="icon" href="./favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* HERO SECTION */}
