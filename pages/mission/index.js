@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import SlideIconButton from "../../components/buttons/SlideIconButton";
-import { AboutPerson } from "../../components/AboutPerson";
+import { AboutPerson } from "../../components";
 
 function index() {
   return (
@@ -110,6 +110,31 @@ function index() {
             pressing global health challenges.
           </div>
           <div className="text-xl font-bold">The Team</div>
+          <div className={`flex items-center justify-center`}>
+            <AboutPerson
+              name={`Lama Ayoub`}
+              picture={`https://media.graphassets.com/l3Eco1s4TmGYkUEJDZHI`}
+              description={`Hello! I’m Lama, a Junior at the Lebanese American
+                  University. My bioinformatics journey started back in 2021,
+                  and later on, I picked up an interest in Data Analytics and
+                  consequently added it as a Minor. When I first learned about
+                  bioinformatics, I realized that this field has the potential to
+                  make a significant impact on the world, and I was eager to
+                  be a part of it. As I explored the bioinformatics community in
+                  Lebanon, I saw an opportunity to bring young minds together
+                  and create a collaborative initiative. That's how I came up
+                  with the idea for the Lebanese Bioinformatics Society. I'm
+                  excited to see this society grow and develop through the
+                  contributions of its members. My involvement in
+                  bioinformatics is fueled by my intense passion and my
+                  constant pursuit of knowledge. With the added dedication
+                  and enthusiasm of our current and future participants, I am
+                  excited to see how this idea will develop and hopefully lead
+                  us down a road of further innovation and creativity.
+                `}
+              linkedin={`https://www.linkedin.com/in/lama-ayoub/`}
+            />
+          </div>
           <div className="text-xl font-bold">Want to join?</div>
           <div>
             We appreciate your ideas and feedback. If you believe you possess
@@ -138,9 +163,9 @@ function index() {
           width="100%"
           height="450"
           style={{ border: 0 }}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </div>
