@@ -19,7 +19,7 @@ function index() {
       <div
         className={`flex flex-col justify-center xl:flex-row w-screen space-y-5 xl:space-y-0`}
       >
-        <div className={`p-10 space-y-5`}>
+        <div className={`lg:p-10 space-y-5`}>
           <div className={`bg-white space-y-5 rounded-lg shadow-xl p-10`}>
             <h1 className={`text-black font-bold text-xl`}>Latest Research</h1>
             <div className={`border-b border-gray-300`}></div>
@@ -34,7 +34,7 @@ function index() {
               ))}
           </div>
         </div>
-        <div className={`p-10`}>
+        <div className={`lg:p-10 pb-10`}>
           <PostWidget />
           <WorkRequestForm />
         </div>

@@ -132,7 +132,7 @@ export default function Home({ posts }) {
 
       {/* JOIN US */}
       <div className="h-auto w-screen p-16 flex flex-col lg:flex-row lg:space-x-10 lg:space-y-0 space-y-5 items-center justify-center">
-        <div className="text-xl font-light">
+        <div className="text-xl font-light text-center">
           Join the Lebanese Bioinformatics Society Today
         </div>
         <Link href="/login">

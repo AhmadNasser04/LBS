@@ -49,7 +49,7 @@ function Footer() {
         </Link>
       </div>
       {/* OTHER */}
-      <div className="space-y-5">
+      <div className="space-y-5 order-last lg:order-none">
         <div className="space-y-2">
           <div className="font-bold text-xl">
             Lebanese Bioinformatics Society
@@ -88,7 +88,7 @@ function Footer() {
         <div className="font-light">Terms & Conditions</div>
       </div>
       {/* CATEGORIES */}
-      <div className="space-y-5 font-semibold">
+      <div className="space-y-5 font-semibold hidden lg:inline-block">
         {categories.map((category) => (
           <div key={category.id}>
             <Link href={`/${category.slug}`}>{category.name}</Link>
@@ -102,7 +102,7 @@ function Footer() {
         </div>
       </div>
       {/* SUGGESTIONS */}
-      <div className="space-y-2 rounded-3xl">
+      <div className="space-y-2 rounded-3xl hidden lg:inline-block">
         <div>Got any suggestions?</div>
         <div>We would love to listen</div>
         <div>

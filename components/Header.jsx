@@ -22,7 +22,7 @@ const NavBar = () => {
         } shadow-lg w-full ${
           scrollPosition <= 50
             ? "py-6 opacity-100"
-            : `py-2 opacity-80 ${open && "py-4 opacity-100"}`
+            : `py-2 lg:opacity-80 ${open && "py-4 opacity-100"}`
         } lg:px-10 px-7 transition-all`}
       >
         <div className="font-bold text-2xl cursor-default flex items-center text-white roboto">

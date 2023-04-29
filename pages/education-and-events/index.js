@@ -24,12 +24,12 @@ function index() {
   }, []);
 
   return (
-    <div className="bg-black px-10 mb-8 pt-28">
+    <div className="bg-black lg:px-10 mb-8 pt-28">
       <div className={`flex flex-col lg:flex-row justify-center md:p-16`}>
         <div>
           {user ? (
             <div
-              className={`space-y-5 p-5 flex flex-col items-center justify-center`}
+              className={`space-y-5 lg:p-5 flex flex-col items-center justify-center`}
             >
               {events
                 .filter(
@@ -42,9 +42,9 @@ function index() {
                 ))}
             </div>
           ) : (
-            <div>
+            <div className={`space-y-5`}>
               <div
-                className={`space-y-5 p-5 flex flex-col items-center justify-center`}
+                className={`space-y-5 lg:p-5 flex flex-col items-center justify-center`}
               >
                 {events
                   .slice(0, 2)
@@ -60,7 +60,7 @@ function index() {
               </div>
               <div className={`flex flex-col items-center justify-center`}>
                 <div
-                  className={`lg:w-[70%] bg-white rounded-lg shadow-xl py-5 flex flex-col items-center justify-center`}
+                  className={`lg:w-[70%] bg-white rounded-lg shadow-xl w-full py-5 flex flex-col items-center justify-center`}
                 >
                   <div>Want to see more events?</div>
                   <Link href={`/login`}>
@@ -71,7 +71,7 @@ function index() {
             </div>
           )}
         </div>
-        <div className={`p-5`}>
+        <div className={`lg:p-5 py-5`}>
           <PostWidget />
           <WorkRequestForm />
         </div>

@@ -5,7 +5,7 @@ import { AboutPerson } from "../../components";
 
 function index() {
   return (
-    <div className="pt-16">
+    <div className="pt-28">
       {/* ABOUT */}
       <div className="bg-black w-full h-auto p-5 lg:p-36 flex flex-col justify-center items-center text-center text-white space-y-5">
         <div className="text-5xl font-bold">A BIT ABOUT US</div>
