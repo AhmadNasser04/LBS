@@ -6,7 +6,7 @@ function AboutPerson({ name, description, picture, linkedin }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="">
+    <div className="max-w-[450px]">
       <div className="group relative flex justify-center items-center cursor-pointer">
         <div className="group filter">
           <img
