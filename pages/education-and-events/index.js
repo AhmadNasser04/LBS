@@ -23,6 +23,12 @@ function index() {
     };
   }, []);
 
+  console.log(
+    events.filter(
+      (event) => event.node.category.slug === "education-and-events"
+    )
+  );
+
   return (
     <div className="bg-black lg:px-10 mb-8 pt-28">
       <div className={`flex flex-col lg:flex-row justify-center md:p-16`}>
@@ -47,11 +53,11 @@ function index() {
                 className={`space-y-5 lg:p-5 flex flex-col items-center justify-center`}
               >
                 {events
-                  .slice(0, 2)
                   .filter(
                     (event) =>
                       event.node.category.slug === "education-and-events"
                   )
+                  .slice(0, 2)
                   .map((event) => (
                     <div className={`lg:w-[70%]`}>
                       <EventCard event={event.node} />

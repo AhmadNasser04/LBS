@@ -5,7 +5,7 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 export const getPosts = async () => {
   const query = gql`
     query GetPosts {
-      postsConnection(where: {}, orderBy: createdAt_DESC) {
+      postsConnection(where: {}, orderBy: createdAt_DESC, first: 500) {
         edges {
           node {
             author {
