@@ -15,9 +15,10 @@ export default function Home({ posts }) {
         id="hero"
       >
         <video
-          autoPlay="autoplay"
+          autoPlay
           loop
           muted
+          controls={false}
           className="w-screen h-screen absolute object-cover -z-10 top-0 left-0"
         >
           <source
@@ -50,7 +51,7 @@ export default function Home({ posts }) {
           </Link>
         </div>
         <div className="w-full h-full">
-          <video autoPlay="autoplay" loop muted className="w-full h-full">
+          <video autoPlay loop muted controls={false} className="w-full h-full">
             <source
               src="https://media.graphassets.com/79MfDBDcQnSPLClRq5eh"
               type="video/mp4"
