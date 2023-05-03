@@ -21,7 +21,7 @@ export default function Home({ posts }) {
           className="w-screen h-screen absolute object-cover -z-10 top-0 left-0"
         >
           <source
-            src="https://media.graphassets.com/qcF47jinSVirOqRiU7vM"
+            src="https://media.graphassets.com/8VHht5bwS2OzH9Snt4Zq"
             type="video/mp4"
           />
         </video>
@@ -52,7 +52,7 @@ export default function Home({ posts }) {
         <div className="w-full h-full">
           <video autoPlay="autoplay" loop muted className="w-full h-full">
             <source
-              src="https://media.graphassets.com/1tyG8Lg3QXCGRvOHijA9"
+              src="https://media.graphassets.com/79MfDBDcQnSPLClRq5eh"
               type="video/mp4"
             />
           </video>
